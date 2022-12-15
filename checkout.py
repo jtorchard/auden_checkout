@@ -20,6 +20,7 @@ PRICES = {
     'C'.lower(): Decimal(10),
 }
 
+
 class Checkout():
     def __init__(self):
         pass
