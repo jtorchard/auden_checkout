@@ -51,13 +51,13 @@ def test_two_a_costs_100(checkout, price_of_a):
 
 # Discounts
 
-def test_three_a_costs_130():
+def test_three_a_costs_130(checkout):
     basket = {
         'a': 3,
     }
     assert checkout.total(basket) == Decimal(130)
 
-def test_two_b_costs_45():
+def test_two_b_costs_45(checkout):
     basket = {
         'b': 2,
     }
