@@ -47,7 +47,7 @@ def test_two_a_costs_100(checkout, price_of_a):
     basket = {
         'a': 2,
     }
-    assert checkout.total(basket) == price_of_a
+    assert checkout.total(basket) == price_of_a * 2
 
 # Discounts
 
@@ -56,6 +56,19 @@ def test_three_a_costs_130(checkout):
         'a': 3,
     }
     assert checkout.total(basket) == Decimal(130)
+
+def test_nine_a_costs_390(checkout):
+    basket = {
+        'a': 9,
+    }
+    assert checkout.total(basket) == Decimal(390)
+
+def test_ten_a_costs_440(checkout):
+    basket = {
+        'a': 10,
+    }
+    assert checkout.total(basket) == Decimal(440)
+
 
 def test_two_b_costs_45(checkout):
     basket = {
